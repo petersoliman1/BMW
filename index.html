@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW</title>
+    <!--Icon Document-->
+    <link rel="icon" href="Img/BMW.png">
+    <!--Font Google-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <!--Library fontawesome-->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!--my style-->
+    <link rel="stylesheet" href="css/Style.css">
+</head>
+
+<body>
+
+    <!-------------------- 
+    ---- Start Navbar ----
+    --------------------->
+    <header>
+        <!-- logo Navbar -->
+        <a href="index.html"><img src="img/BMW.png" alt="Logo BMW" class="logo"></a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+        <!-- Button Navbar -->
+        <!-- Start Button And Modal Login Form  -->
+        <!-- Start Button -->
+        <div class="container-button">
+            <button class="Button-modal" onclick="document.getElementById('openModal').style.display='block'"
+                style="width:auto;">
+                <a href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Log In
+                </a>
+            </button>
+        </div>
+        <!-- End Button -->
+
+
+        <!------------------------------ 
+        ---- Start Modal Login Form ----
+        -------------------------------->
+        <div id="openModal" class="modal">
+
+            <form class="modal-content animate" action="Contact.html" method="post" id="myform"
+                onsubmit="return validata();">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('openModal').style.display='none'" class="close"
+                        title="Close Modal">&times;</span>
+                    <img src="img/avatar.svg" alt="Avatar" class="avatar">
+                    <h2>Welcome</h2>
+                </div>
+
+                <!-- Start The Form -->
+                <div class="container">
+                    <div class="input-div one">
+                        <div class="icon-form">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="div">
+                            <h5>Username</h5>
+                            <input type="text" class="input" placeholder="Enter Your Name, first name and second name."
+                                id="name">
+                        </div>
+                    </div>
+                    <div class="input-div one">
+                        <div class="icon-form">
+                            <i class="fas fa-at"></i>
+                        </div>
+                        <div class="div">
+                            <h5>Email</h5>
+                            <input type="email" class="input" placeholder="Example: email@example.com" id="email">
+                        </div>
+                    </div>
+                    <div class="input-div one">
+                        <div class="icon-form">
+                            <i class="fas fa-mobile"></i>
+                        </div>
+                        <div class="div">
+                            <h5>Phone Number</h5>
+                            <input type="text" class="input" placeholder="Example: 01234567891" id="phone">
+                        </div>
+                    </div>
+                    <div class="input-div pass">
+                        <div class="icon-form">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="div">
+                            <h5>Password</h5>
+                            <input type="password" class="input" placeholder="Use 8 or more characters with a mix of letters, numbers & symbols.
+                        " id="password">
+                        </div>
+                    </div>
+                    <input type="submit" class="btn" value="Login">
+                </div>
+                <!-- End The Form -->
+
+
+                <!-- Start container The Form Footer -->
+                <div class="container-footer">
+                    <button type="button" onclick="document.getElementById('openModal').style.display='none'"
+                        class="cancel-button">
+                        Cancel
+                    </button>
+                    <a class="Forgot-psw" href="#">Forgot Password ?</a>
+                </div>
+            </form>
+        </div>
+        <!-- End Modal Login Form -->
+        <!-- End button And Modal Login Form  -->
+    </header>
+    <!-- End Navbar  -->
+
+
+
+
+    <!----------------------- 
+    ---- Start Slideshow ----
+    ------------------------->
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 4</div>
+            <img src="img/SlideShow/BMW-Homepage-iX-Shytech-Updates-Desktop.jpg" style="width:100%">
+            <div class="text">Caption Text</div>
+            <div class="heding-slideshow">
+                <h2>the ix</h2>
+                <p>a new generation of electric</p>
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 4</div>
+            <img src="img/SlideShow/BMW-MY21-2Series-GranCoupe-HomePage-FMA-Desktop.jpg" style="width:100%">
+            <div class="text">Caption Two</div>
+            <div class="heding-slideshow">
+                <h2>the m5 cs</h2>
+                <p>DISCOVER THE FASTEST STREET-LEGAL BMW EVER</p>
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 4</div>
+            <img src="img/SlideShow/BMW-MY21-M3-M4-Overview-Homepage-FMA-desktop-2.webp" style="width:100%">
+            <div class="text">Caption Three</div>
+            <div class="heding-slideshow">
+                <h2>the M3 and m4</h2>
+                <p>DISCOVER THE ALL-NEW BMW M3 AND M4</p>
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 4</div>
+            <img src="img/SlideShow/SOC21-Homepage-M5CS-Desktop.webp" style="width:100%">
+            <div class="text">Caption Three</div>
+            <div class="heding-slideshow">
+                <h2>the 2</h2>
+                <p>DEFY LIMITS WITH THE 2021 BMW 2 SERIES GRAN COUPE</p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+    <!-- End Slideshow -->
+
+
+
+
+
+
+    <!------------------------------ 
+    ---- Start Services Section ----
+    -------------------------------->
+    <section class="services">
+        <!--heading---------------->
+        <div class="s-heading">
+            <h1>Ser<font color="#57add5">vic</font>es</h1>
+            <p>We Provide The Best In Class Servies For Our Customers</p>
+        </div>
+        <!--services-box-container------------------->
+        <div class="s-box-container">
+
+            <!--service-box-1---------------->
+            <div class="s-box">
+                <!--top-bar-------->
+                <div class="bar"></div>
+                <!--img---------->
+                <img alt="1" src="img/Services Section/1.png" />
+                <!--servies-name---------->
+                <h1>Trade In Value</h1>
+                <!--details------>
+                <p>See where you stand on your journey to owning a BMW.</p>
+                <!--btn---------->
+                <a class="s-btn" href="#">More</a>
+            </div>
+
+            <!--service-box-2---------------->
+            <div class="s-box">
+                <!--top-bar-------->
+                <div class="bar"></div>
+                <!--img---------->
+                <img alt="2" src="img/Services Section/2.webp" />
+                <!--servies-name---------->
+                <h1>Your Credit Score</h1>
+                <!--details------>
+                <p>See where you stand on your journey to owning a BMW.</p>
+                <!--btn---------->
+                <a class="s-btn" href="#">More</a>
+            </div>
+
+            <!--service-box-3---------------->
+            <div class="s-box">
+                <!--top-bar-------->
+                <div class="bar"></div>
+                <!--img---------->
+                <img alt="3" src="img/Services Section/3.webp" />
+                <!--servies-name---------->
+                <h1>Apply for Financing</h1>
+                <!--details------>
+                <p>See where you stand on your journey to owning a BMW.</p>
+                <!--btn---------->
+                <a class="s-btn" href="#">More</a>
+            </div>
+
+            <!--service-box-4---------------->
+            <div class="s-box">
+                <!--top-bar-------->
+                <div class="bar"></div>
+                <!--img---------->
+                <img alt="4" src="img/Services Section/4.png" />
+                <!--servies-name---------->
+                <h1>Stay Connected</h1>
+                <!--details------>
+                <p>See where you stand on your journey to owning a BMW.</p>
+                <!--btn---------->
+                <a class="s-btn" href="#">More</a>
+            </div>
+        </div>
+    </section>
+    <!-- End Services Section -->
+
+    <!------------------------ 
+    ---- Start Play Video ----
+    -------------------------->
+
+    <video autoplay muted loop id="myVideo">
+        <source src="video/Introducing the BMW iX - The All-Electric SAV - BMW USA.mp4" type="video/mp4">
+    </video>
+
+    <div class="content-Video">
+        <h1>Heading</h1>
+        <p>Aliquam erat volutpat. Cum sociis natoque penatibus et magnis dis parturient montes,
+            nascetur ridiculus mus.</p>
+        <button id="myBtnVid" onclick="myFunctionVideo()">Pause</button>
+    </div>
+    <!-- End Play Video -->
+
+
+    <!------------------------------------------------ 
+    ---- Start Section Search Bar With Background ----
+    ------------------------------------------------->
+    <div class="Background">
+        <div class="B-Background">
+            <!-- Start Search Bar with Autocomplete Search Suggestions in JavaScript -->
+            <div class="wrapper">
+                <div class="search-input">
+                    <a href="" target="_blank" hidden></a>
+                    <input type="text" placeholder="Type to search..">
+                    <div class="autocom-box">
+                        <!-- here list are inserted from javascript -->
+                    </div>
+                    <div class="icon"><i class="fas fa-search"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Start Section Search Bar With Background -->
+
+
+
+
+    <!--------------------------------------------------------------- 
+    ---- Start Image Overlay Hover Effects with CSS3 Transitions ----
+    ---------------------------------------------------------------->
+    <section class="container-effect">
+        <div class="uxhover hoverEffect">
+            <img src="img/Effect/BMW-MY20-X7-Gallery-Exterior-04.webp" />
+            <div class="mask"></div>
+            <div class="content">
+                <h2>New Effects</h2>
+                <p>MBW of Slinger, WI, began operations over 50 years ago with its introduction of a lower maintenance vibratory plate compactor. Today the Company's product line encompasses a full line of soil compaction products, equipment for mixing, vibrating, finishing.</p>
+                <a href="About.html" class="info">Read More</a>
+            </div>
+        </div>
+
+
+        <div class="uxhover hoverEffect">
+            <img src="img/Effect/BMW-MY20-X7-Gallery-Exterior-08.webp" />
+            <div class="mask"></div>
+            <div class="content">
+                <h2>New Effects</h2>
+                <p>MBW of Slinger, WI, began operations over 50 years ago with its introduction of a lower maintenance vibratory plate compactor. Today the Company's product line encompasses a full line of soil compaction products, equipment for mixing, vibrating, finishing.</p>
+                <a href="About.html" class="info">Read More</a>
+            </div>
+        </div>
+
+
+        <div class="uxhover hoverEffect">
+            <img src="img/Effect/BMW-MY20-X7-Gallery-Exterior-11.webp" />
+            <div class="mask"></div>
+            <div class="content">
+                <h2>New Effects</h2>
+                <p>MBW of Slinger, WI, began operations over 50 years ago with its introduction of a lower maintenance vibratory plate compactor. Today the Company's product line encompasses a full line of soil compaction products, equipment for mixing, vibrating, finishing.</p>
+                <a href="About.html" class="info">Read More</a>
+            </div>
+        </div>
+
+        <div class="uxhover hoverEffect">
+            <img src="img/Effect/MYU21-Alpina-XB7-Gallery-09.webp" />
+            <div class="mask"></div>
+            <div class="content">
+                <h2>New Effects</h2>
+                <p>MBW of Slinger, WI, began operations over 50 years ago with its introduction of a lower maintenance vibratory plate compactor. Today the Company's product line encompasses a full line of soil compaction products, equipment for mixing, vibrating, finishing.</p>
+                <a href="About.html" class="info">Read More</a>
+            </div>
+        </div>
+    </section>
+    <!-- End Image Overlay Hover Effects with CSS3 Transitions -->
+
+
+    
+    <!--------------------------------------- 
+    ---- Strat Scroll Back To Top Button ----
+    ----------------------------------------->
+    <button onclick="topFunction()" id="myBtnTop" title="Go to top">&#10148;</button>
+    <!-- Strat Scroll Back To Top Button -->
+
+
+    <!-------------------- 
+    ---- Start Footer ----
+    --------------------->
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+            <img src="img/BMW.png">
+            <h3>Car <span>BMW</span></h3>
+
+            <p class="footer-links">
+                <a href="index.html">Home</a>
+                |
+                <a href="About.html">About</a>
+                |
+                <a href="Contact.html">Contact</a>
+            </p>
+            <p class="footer-Copyright">Copyright &copy; 2021 <span>Design By: Peter Soliman</span> .you</p>
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p>Egypt - Cairo</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+2 0122 264 1669</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:petersoliman150@gmail.com">petersoliman150@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>About the company</span>
+                bmwcarusa.com is a site that presents information about all types of the latest BMW cars and BMW motorcycles.</p>
+            <div class="footer-icons">
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-google"></i></a>
+                <a href="#"><i class="fab fa-yahoo"></i></a>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- suggestions -->
+    <script src="js/suggestions.js"></script>
+    <!--my main-->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

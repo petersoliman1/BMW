@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW</title>
+    <!--Icon Document-->
+    <link rel="icon" href="Img/BMW.png">
+    <!--Font Google-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <!--Library fontawesome-->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!--my style-->
+    <link rel="stylesheet" href="css/Style.css">
+</head>
+<body>
+
+    <!-------------------- 
+    ---- Start Navbar ----
+    --------------------->
+    <header>
+        <!-- logo Navbar -->
+        <a href="index.html"><img src="img/BMW.png" alt="Logo BMW" class="logo"></a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+        <!-- Button Navbar -->
+        <!-- Start Button And Modal Login Form  -->
+        <!-- Start Button -->
+        <div class="container-button">
+            <button class="Button-modal" onclick="document.getElementById('openModal').style.display='block'"
+                style="width:auto;">
+                <a href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Log In
+                </a>
+            </button>
+        </div>
+        <!-- End Button -->
+
+
+        <!------------------------------ 
+        ---- Start Modal Login Form ----
+        -------------------------------->
+        <div id="openModal" class="modal">
+
+            <form class="modal-content animate" action="Contact.html" method="post" id="myform"
+                onsubmit="return validata();">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('openModal').style.display='none'" class="close"
+                        title="Close Modal">&times;</span>
+                    <img src="img/avatar.svg" alt="Avatar" class="avatar">
+                    <h2>Welcome</h2>
+                </div>
+
+                <!-- Start The Form -->
+                <div class="container">
+                    <div class="input-div one">
+                        <div class="icon-form">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="div">
+                            <h5>Username</h5>
+                            <input type="text" class="input" placeholder="Enter Your Name, first name and second name."
+                                id="name">
+                        </div>
+                    </div>
+                    <div class="input-div one">
+                        <div class="icon-form">
+                            <i class="fas fa-at"></i>
+                        </div>
+                        <div class="div">
+                            <h5>Email</h5>
+                            <input type="email" class="input" placeholder="Example: email@example.com" id="email">
+                        </div>
+                    </div>
+                    <div class="input-div one">
+                        <div class="icon-form">
+                            <i class="fas fa-mobile"></i>
+                        </div>
+                        <div class="div">
+                            <h5>Phone Number</h5>
+                            <input type="text" class="input" placeholder="Example: 01234567891" id="phone">
+                        </div>
+                    </div>
+                    <div class="input-div pass">
+                        <div class="icon-form">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="div">
+                            <h5>Password</h5>
+                            <input type="password" class="input" placeholder="Use 8 or more characters with a mix of letters, numbers & symbols.
+                        " id="password">
+                        </div>
+                    </div>
+                    <input type="submit" class="btn" value="Login">
+                </div>
+                <!-- End The Form -->
+
+
+                <!-- Start container The Form Footer -->
+                <div class="container-footer">
+                    <button type="button" onclick="document.getElementById('openModal').style.display='none'"
+                        class="cancel-button">
+                        Cancel
+                    </button>
+                    <a class="Forgot-psw" href="#">Forgot Password ?</a>
+                </div>
+            </form>
+        </div>
+        <!-- End Modal Login Form -->
+        <!-- End button And Modal Login Form  -->
+    </header>
+    <!-- End Navbar  -->
+
+
+
+    <!-- Start Contact -->
+    <div class="Contact">
+        <div class="Contact-container">
+            <div class="box">
+                <div class="icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="details">
+                        <h3>Egypt</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="icon">
+                    <i class="fas fa-phone"></i>
+                    <div class="details">
+                        <h3>+2 0122 264 1669</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="icon">
+                    <i class="fas fa-envelope"></i>
+                    <div class="details">
+                        <h3>petersoliman150@gmail.com</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="Contact-container">
+            <div class="box">
+                <div class="icon">
+                    <i class="fab fa-linkedin"></i>
+                    <div class="details1">
+
+                        <ul>
+                            <li>
+                                <h3 class="press">Press Here</h3>
+                                <a href="https://www.linkedin.com/in/peter-soliman-2b6901156/" target="_blank">
+                                    <span class="fab fa-linkedin"></span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="icon">
+                    <i class="fab fa-codepen"></i>
+                    <div class="details1">
+
+                        <ul>
+                            <li>
+                                <h3 class="press">Press Here</h3>
+                                <a href="https://codepen.io/PeterSoliamn" target="_blank">
+                                    <span class="fab fa-codepen"></span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="icon">
+                    <i class="fab fa-github"></i>
+                    <div class="details1">
+
+                        <ul>
+                            <li>
+                                <h3 class="press">Press Here</h3>
+                                <a href="https://github.com/petersoliman1" target="_blank">
+                                    <span class="fab fa-github"></span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Contact -->
+
+
+
+
+    <!-------------------- 
+    ---- Start Footer ----
+    --------------------->
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+            <img src="img/BMW.png">
+            <h3>Car <span>BMW</span></h3>
+
+            <p class="footer-links">
+                <a href="index.html">Home</a>
+                |
+                <a href="About.html">About</a>
+                |
+                <a href="Contact.html">Contact</a>
+            </p>
+            <p class="footer-Copyright">Copyright &copy; 2021 <span>Design By: Peter Soliman</span> .you</p>
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p>Egypt - Cairo</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+2 0122 264 1669</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:petersoliman150@gmail.com">petersoliman150@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>About the company</span>
+                bmwcarusa.com is a site that presents information about all types of the latest BMW cars and BMW motorcycles.</p>
+            <div class="footer-icons">
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-google"></i></a>
+                <a href="#"><i class="fab fa-yahoo"></i></a>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!--my main-->
+    <script src="js/main.js"></script>
+</body>
+</html>

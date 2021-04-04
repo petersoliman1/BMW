@@ -1,0 +1,1498 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif, Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #000000;
+}
+
+
+
+
+/* ------------------------------------------------------
+-------------- Start Reset Styles Scroll --------------
+--------------------------------------------------------*/
+:root {
+    --TurquoiseBlue: #55E5ED;
+    --PictonBlue: #57add5;
+    --Turquoise : #52E3C2;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--PictonBlue);
+}
+/* End Reset Styles Scroll*/
+
+
+/* ------------------------------------------------------
+-------------------- Start Navbar -----------------------
+--------------------------------------------------------*/
+/* Start Navbar */
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 40px 100px;
+    z-index: 100000;
+}
+
+header.sticky{
+    padding: 5px 100px;
+    background: #22215094;
+}
+
+header .logo{
+    position: relative;
+    height: 55px;
+}
+
+header ul{
+    position: absolute;
+    display: flex;
+    left: 386px;
+}
+
+header ul li{
+    position: relative;
+    list-style: none;
+}
+
+header ul li a{
+    position: relative;
+    text-decoration: none;
+    padding: 20px;
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.6s;
+}
+
+header ul li a:hover{
+    background: #4ba7d2;
+    color: #050801;
+    box-shadow: 0 0 5px #4ba7d2,
+    0 0 25px #4ba7d2,
+    0 0 50px #4ba7d2,
+    0 0 100px #4ba7d2;
+}
+
+header.sticky ul li a{
+    color: #f5f5f5;
+}
+
+/* Start Button And Modal Login Form */
+/* Start Button Model */
+.Button-modal{
+    background:transparent;   /* The Button Transparent Background*/
+    border:none;
+    outline:none;
+}
+
+/* Container Button */
+.container-button a{
+    position: relative;
+    display: inline-block;
+    padding: 20px;
+    margin: 4px 0;
+    color: #f5f5f5;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    font-size: 24px;
+    font-weight: bold;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0005);
+}
+
+.container-button a:hover{
+    background: #4ba7d2;
+    color: #050801;
+    box-shadow: 0 0 5px #4ba7d2,
+    0 0 25px #4ba7d2,
+    0 0 50px #4ba7d2,
+    0 0 100px #4ba7d2;
+}
+
+/* Moves the line around the link and div inside span */
+.container-button a span{
+    position: absolute;
+    display: block;
+}
+
+.container-button a span:nth-child(1){
+    top : 0;
+    left : 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(180deg,transparent,#00ffff);
+    animation: animate1 4s linear infinite;
+    animation-delay: 1s;
+}
+@keyframes animate1{
+    0%{
+    left: -100%;
+    }
+    50%,100%{
+    left: 100%;
+    }
+}
+
+.container-button a span:nth-child(2){
+    top:-100%;
+    right:0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#00ffff);
+    box-shadow: 0 10px 50px #f0f;
+    animation: animate2 4s linear infinite;
+    animation-delay: 2s;
+}
+@keyframes animate2{
+    0%{
+    top: -100%;
+    }
+    50%, 100%{
+    top: 100%;
+    }
+}
+
+.container-button a span:nth-child(3){
+    bottom: 0;
+    right:-100%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(270deg,transparent,#00ffff);
+    animation: animate3 4s linear infinite;
+    animation-delay: 3s;
+}
+@keyframes animate3{
+    0%{
+    right: -100%;
+    }
+    50%, 100%{
+    right: 100%;
+    }
+}
+
+.container-button a span:nth-child(4){
+    bottom: -100%;
+    left:0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#00ffff);
+    animation: animate4 4s linear infinite;
+    animation-delay: 4s;
+}
+@keyframes animate4{
+    0%{
+    bottom: -100%;
+    }
+    50%, 100%{
+    bottom: 100%;
+    }
+}
+/* End Button Model */
+
+
+
+/* ------------------------------------------------------
+-------------- Start Modal Login Form -------------------
+--------------------------------------------------------*/
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgb(0 0 0 / 72%); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #0a3e6769;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 60%; /* Could be more or less, depending on screen size */
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 15%;
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #f31100;
+    cursor: pointer;
+}
+
+.imgcontainer h2{
+    color: #0ed0ef;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -3px black;
+	text-transform: uppercase;
+	font-size: 40px;
+    margin: 10px 0px 0px;
+}
+
+/* container The Form */
+.container,
+.container-footer{
+    padding: 16px;
+}
+
+/* Start The Input */
+.container .input-div{
+	position: relative;
+    display: grid;
+    grid-template-columns: 7% 93%;
+    margin: 25px 62px;
+    padding: 5px 0;
+    border-bottom: 2px solid #d9d9d9;
+    width: 83%;
+}
+
+.container .input-div.one{
+	margin-top: 0;
+}
+
+.input-div > div{
+    position: relative;
+	height: 45px;
+}
+
+/* Start The Icon inside The Form */
+.icon-form{
+	color: #d9d9d9;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.icon-form i{
+	transition: .3s;
+}
+
+/* Start The heading inside The Form */
+.input-div > div > h5{
+	position: absolute;
+	left: 10px;
+	top: 75%;
+	transform: translateY(-170%);
+	color: #999;
+	font-size: 18px;
+	transition: .3s;
+}
+
+/* Start insert input after and focus the content */
+.input-div:before, .input-div:after{
+	content: '';
+	position: absolute;
+	bottom: -2px;
+	width: 0%;
+	height: 2px;
+	background-color: #0ed0ef;
+	transition: .4s;
+}
+
+.input-div:before{
+	right: 50%;
+}
+
+.input-div:after{
+	left: 50%;
+}
+
+.input-div.focus:before, .input-div.focus:after{
+	width: 50%;
+}
+
+.input-div.focus > div > h5{
+	top: 20px;
+	font-size: 15px;
+}
+
+.input-div.focus > .icon-form > i{
+	color: #0ed0ef;
+}
+
+.input-div > div > input{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	border: none;
+	outline: none;
+	background: none;
+	padding: 9px 11px;
+    font-size: 19px;
+	color: #fff;
+	font-family: 'poppins', sans-serif;
+}
+
+.input-div.pass{
+	margin-bottom: 4px;
+}
+
+/* Start Write inside input */
+::placeholder {
+	color: #57add5;
+	font-size: 12px;
+}
+
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* button submit */
+.btn{
+	display: block;
+    width: 75%;
+    height: 50px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    background-image: linear-gradient(to right, #52e3c2, #57add5, #55e5ed);
+    background-size: 200%;
+    font-size: 20px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    margin: 16px 98px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.btn:hover{
+    background-image: linear-gradient(to left, #52e3c2, #55e5ed, #57add5);
+}
+
+/*End Login Form*/
+/* container The Form Footer */
+.container-footer{
+    background-color:#0a3e6769;
+}
+
+/* Extra styles for the Forgot Password */
+.container-footer .Forgot-psw{
+    float: right;
+    padding-top: 16px;
+    text-decoration: none;
+    color: #b7b4b4;
+    transition: .3s;
+    margin-right: 15px;
+    font-size: 15px;
+}
+
+.container-footer .Forgot-psw:hover{
+    color: #3da4d4;
+}
+
+/* Extra styles for the cancel button */
+.container-footer .cancel-button {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f31100;
+    color: white;
+    margin: 8px 22px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom {
+    from {
+    -webkit-transform: scale(0);
+    }
+    to {
+    -webkit-transform: scale(1);
+    }
+}
+
+@keyframes animatezoom {
+    from {
+    transform: scale(0);
+    }
+    to {
+    transform: scale(1);
+    }
+}
+/* End Modal Login Form */
+/* Start Button And Modal Login Form */
+/* End Navbar */
+
+
+/* ------------------------------------------------------
+------------------- Start Slideshow ---------------------
+--------------------------------------------------------*/
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    margin: auto;
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/4 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+/* Text on the SlideShow */
+.heding-slideshow {
+    position: absolute;
+    text-transform: uppercase;
+    letter-spacing: -.1px;
+    color: white;
+    top: 30%;
+    left: 5%;
+}
+
+.heding-slideshow h2 {
+    font-size: 45px;
+    font-weight: bold;
+    line-height: 75px;
+}
+
+.heding-slideshow p {
+    font-size: 28px;
+    width: 65%;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    height: 20px;
+    width: 20px;
+    margin: 10px 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #57add5;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+}
+/* End Slideshow */
+
+/* Start Services Section */
+
+.services{
+	width:100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+    margin: 20px 0px;
+}
+
+.s-heading{
+	text-align:center;
+    align-items: center;
+}
+.s-heading h1{
+	color:#ffffff;
+	font-size: 3rem;
+	font-weight: 400;
+	letter-spacing: 1px;
+	margin: 0px;
+}
+.s-heading p{
+	color: rgba(180, 184, 187, 0.6);
+	font-size: 1rem;
+	margin: 5px;
+	text-align: center;
+}
+.s-box-container{
+	width:100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.s-box{
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	width:330px;
+	padding: 20px 25px;
+	height: 300px;
+	box-sizing: border-box;
+	margin: 20px 10px;
+	position: relative;
+}
+.s-box img{
+	height: 75px;
+    margin-bottom: 15px;
+}
+.s-box h1{
+	color:#576975;
+	letter-spacing: 1px;
+	font-size: 25px;
+	margin-bottom: 8px;
+	white-space: nowrap
+}
+.s-box p{
+	color: rgba(87,105,117,0.90);
+	text-align: center;
+}
+.s-btn{
+	width: 140px;
+	height: 40px;
+	border-radius: 20px;
+	border:1px solid rgba(74,144,226,0.50);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color:#576975;
+	margin-top:10px; 
+}
+.bar{
+	width: 100px;
+	height: 6px;
+	position: absolute;
+	left: 50%;
+	top: 0%;
+	transform: translateX(-50%);
+	background-color:#1b6bd3; 
+	border-radius: 0px 0px 10px 10px;
+	display: none;
+	animation: bar 0.5s;
+}
+.s-box:hover{
+	box-shadow: 2px 2px 30px rgba(155, 155, 160, 0.329);
+	transition: all ease 0.3s;
+    background-color: rgb(255, 255, 255);
+}
+.s-btn:hover{
+	background-color:#57add5;
+	border: 1px solid #57add5;
+	color:#FFFFFF;
+    text-decoration: none;
+	transition: all ease 0.3s;
+}
+.s-box:hover .bar{
+	display: block;
+}
+@keyframes bar{
+	0%{
+		width:0px;
+	}
+	100%{
+		width:100px;
+	}
+}
+@media(max-width:1050px){
+	.s-box-container{
+		flex-wrap: wrap;
+		
+	}	
+	.services{
+		height: auto;
+	}
+	.s-heading{
+		margin: 15px;
+	}
+	.s-box{
+		flex-grow: 1;
+	}
+}
+/* End Services Section */
+
+
+/* ---------------------------------------------
+---- Start Background video with JavaScript ----
+----------------------------------------------*/
+#myVideo {
+    position: relative;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.content-Video {
+    position: absolute;
+    top: 1640px;
+    right: 319px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 50%;
+    padding: 20px;
+} 
+
+#myBtnVid {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background-image: linear-gradient(to right, #52e3c2, #57add5, #55e5ed);
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#myBtnVid:hover {
+    background-image: linear-gradient(to left, #52e3c2, #55e5ed, #57add5);
+    color: black;
+}
+/* End Background video with JavaScript */
+
+/* -------------------------------------------------
+---- Start Section Search Bar With Backgroun -------
+----------------------------------------------------*/
+.Background{
+    background-image: url(../img/BMW-MY21-X7-Gallery-03v.webp);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 500px;
+    width: 100%;
+}
+.B-Background{
+    background-color: rgba(63, 62, 62, 0.349);
+    height: 500px;
+}
+
+.wrapper{
+    position: absolute;
+    width: 500px;
+    margin: 150px auto;
+    left: 34%;
+}
+
+.wrapper .search-input{
+    background: #fff;
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
+}
+
+.search-input input{
+    height: 55px;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 0 60px 0 20px;
+    font-size: 18px;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+}
+
+.search-input.active input{
+    border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    -ms-border-radius: 5px 5px 0 0;
+    -o-border-radius: 5px 5px 0 0;
+}
+
+.search-input .autocom-box{
+    padding: 0;
+    opacity: 0;
+    pointer-events: none;
+    max-height: 280px;
+    overflow-y: auto;
+}
+
+.search-input.active .autocom-box{
+    padding: 10px 8px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.autocom-box li{
+    list-style: none;
+    padding: 8px 12px;
+    display: none;
+    width: 100%;
+    cursor: default;
+    border-radius: 3px;
+}
+
+.search-input.active .autocom-box li{
+    display: block;
+}
+.autocom-box li:hover{
+    background: #efefef;
+}
+
+.search-input .icon{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    line-height: 55px;
+    font-size: 20px;
+    color: #57add5;
+    cursor: pointer;
+}
+/* End Start Section Search Bar With Background */
+
+
+
+
+/* -----------------------------------------------------------------
+---- Start Image Overlay Hover Effects with CSS3 Transitions -------
+------------------------------------------------------------------*/
+.container-effect{
+    margin: 50px 0;
+    padding-left: 60px;
+}
+
+/* General style */
+.uxhover {
+    width:46%;
+    margin: 10px;
+    display: inline-block;
+    border: 12px solid #fff;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+}
+
+.uxhover .mask,
+.uxhover .content {
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0
+}
+
+.uxhover img {
+    display: block;
+    position: relative
+}
+
+.uxhover h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 26px;
+    padding: 10px;
+    border-bottom: 2px solid rgba(207, 192, 192, 0.3);
+    margin: 20px 0 0 0
+}
+
+.uxhover p {
+    font-size: 18px;
+    position: relative;
+    color: #fff;
+    padding: 0px 20px 0px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.uxhover a.info {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    font-size:18px;
+    border-radius:5px;
+    margin-top: 20px
+}
+
+/* Effect */
+
+.hoverEffect img {
+    width:100%;
+    height:auto;
+    transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+}
+
+.hoverEffect .mask {
+    background-color: rgba(12, 19, 27, 0.6);
+    width: 100%;
+    padding: 167px;
+    height: 100%;
+    opacity: 0;
+    transform: translate(265px, 145px) rotate(45deg);
+    -webkit-transform: translate(265px, 145px) rotate(45deg);
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+}
+
+.hoverEffect h2 {
+    border-bottom: 2px solid rgba(207, 192, 192, 0.3);
+    background: transparent;
+    margin: 20px 40px 0px 40px;
+    -webkit-transform: translate(200px, -200px);
+    transform: translate(200px, -200px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.hoverEffect p {
+    transform: translate(-200px, 200px);
+    -webkit-transform: translate(200px, -250px);
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+}
+
+.hoverEffect a.info {
+    transform: translate(0px, 100px);
+    -webkit-transform: translate(0px, 100px);
+    transition: all 0.2s 0.1s ease-in-out;
+    -webkit-transition: all 0.2s 0.1s ease-in-out;
+}
+
+/* Effect 2:hover*/
+
+.hoverEffect:hover .mask {
+    opacity: 1;
+    transform: translate(-0px, -0px) rotate(0deg);
+    -webkit-transform: translate(-0px, -0px) rotate(0deg);
+    -moz-transform: translate(-0px, -0px) rotate(0deg);
+    -ms-transform: translate(-0px, -0px) rotate(0deg);
+    -o-transform: translate(-0px, -0px) rotate(0deg);
+}
+
+.hoverEffect:hover h2 {
+    transform: translate(0px, 0px);
+    -webkit-transform: translate(0px, 0px);
+    transition-delay: 0.3s;
+    -webkit-transition-delay: 0.3s;
+}
+
+.hoverEffect:hover p {
+    transform: translate(0px, 0px);
+    -webkit-transform: translate(0px, 0px);
+    transition-delay: 0.4s;
+    -webkit-transition-delay: 0.4s;
+}
+
+.hoverEffect:hover a.info {
+    transform: translate(0px, 0px);
+    -webkit-transform: translate(0px, 0px);
+    transition-delay: 0.5s;
+    -webkit-transition-delay: 0.5s;
+}
+/* End Image Overlay Hover Effects with CSS3 Transitions */
+
+
+
+
+
+/* ------------------------------------------------------
+------------------- Start Footer ------------------------
+--------------------------------------------------------*/
+.footer-distributed{
+	background-color: #272429;
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 25px 50px 20px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+.footer-distributed .footer-left{
+	width: 30%;
+}
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+}
+
+/* The company logo */
+.footer-distributed .footer-left img{
+	width: 15%;
+}
+
+.footer-distributed h3 span{
+	color:  #57add5;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+}
+
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-links a:hover{
+	color:  #57add5;
+}
+
+
+.footer-distributed{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+}
+
+/* Copyright */
+.footer-Copyright{
+    color: white;
+}
+
+.footer-Copyright span{
+    color: #57add5;
+}
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 38%;
+}
+
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  #57add5;
+	text-decoration: none;;
+}
+
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 30%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #57add5;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a .fab{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+    text-decoration: none;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+}
+
+.footer-distributed .footer-icons a .fa-facebook-square:hover {
+    background: #3B5998;
+    color: white;
+}
+
+.footer-distributed .footer-icons a .fa-twitter:hover {
+    background: #55ACEE;
+    color: white;
+}
+
+.footer-distributed .footer-icons a .fa-instagram:hover {
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+
+.footer-distributed .footer-icons a .fa-linkedin:hover {
+    background: #007bb5;
+}
+
+.footer-distributed .footer-icons a .fa-youtube:hover {
+    background: #bb0000;
+}
+
+.footer-distributed .footer-icons a .fa-google:hover {
+    background: #dd4b39;
+}
+
+.footer-distributed .footer-icons a .fa-yahoo:hover {
+    background: linear-gradient(120deg, #410093, #430297, #FFFFFF);
+}
+/* End Footer */
+
+
+/* --------------------------------------
+---- Strat Scroll Back To Top Button ----
+---------------------------------------*/
+#myBtnTop {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 15px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #57add5; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 10px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 25px; /* Increase font size */
+
+    -moz-transform: rotate(270deg); /* rotate Arrow on The Top */
+    -webkit-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+
+#myBtnTop:hover {
+    background-color: white; /* Set a background color */
+    color: #57add5; /* Text color */
+}
+
+/* End Scroll Back To Top Button */
+
+
+
+
+/* -----------------------------------------------------------------------------------------
+---------------------------- Start Style Page About ----------------------------------------
+------------------------------------------------------------------------------------------*/
+
+/* ----------------------------
+---- Start Background video ----
+-----------------------------*/
+.About__video{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+}
+/* End Background video */
+
+
+/* ---------------------------------------
+---- Start Read More Read Less Button ----
+----------------------------------------*/
+#more {
+    display: none;
+}
+
+.read{
+    color: wheat;
+    margin: 25px 100px 50px 50px;
+}
+
+.read h2{
+    color: #57add5;
+    margin-bottom: 10px;
+}
+
+.read p{
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 25px;
+    background: #464444ad;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    -webkit-filter: blur(5px);
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #1111116b;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+/* End Read More Read Less Button */
+
+.main{
+    padding: 50px 0;
+}
+
+.main h1{
+    font-size: 42px;
+    color: #333;
+    font-weight: 700;
+}
+
+.main p{
+    font-size: 18px;
+    color: #687074;
+    width: 70%;
+    margin: 15px auto;
+}
+
+.main p a {
+	text-decoration: none;
+	color: #ec1c23;
+	font-weight: 900;
+}
+
+.main ul{
+    margin-top: 50px;
+}
+
+.main ul li{
+    padding: 10px 15px;
+    border: 2px solid #333;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .5s ease;
+	color: #333;
+}
+
+.main ul li.active,
+.main ul li:hover{
+    background-color: #ec1c23;
+    color: #FFF;
+    border: 2px solid #ec1c23;
+}
+
+.main ul li:last-of-type{
+    margin-right: 0 ;
+}
+
+.main ul li:nth-of-type(3),
+.main ul li:nth-of-type(4),
+.main ul li:nth-of-type(5){
+    flex-grow: 2
+}
+
+.main .container-fluid{
+  overflow: hidden;
+  padding: 0;
+}
+
+.main .container-fluid .col-md-3{
+    padding: 0;
+    float: left;
+    transition: all 5s ease-in-out
+}
+
+.main .container-fluid img{
+    width: 100%
+}
+
+@media (max-width: 767px){
+    .main .container-fluid img{
+        margin-bottom: 15px
+    }
+}
+
+
+
+/* ------------------------------------------------------------------------------------
+----------------------------- Start Style Page Contact --------------------------------
+--------------------------------------------------------------------------------------*/
+/* Start Contact */
+.Contact{
+	background:
+	linear-gradient(
+		rgba(26, 28, 29, 0.49),
+		rgba(26, 28, 29, 0.49)
+		), 
+		url('../img/BMW-MY21-X7-Gallery-14.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 175px;
+}
+
+.Contact-container{
+	width: 900px;
+	margin: 0px auto 0;
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.Contact-container .box{
+	position: relative;
+	width: 300px;
+	height: 100px;
+	box-sizing: border-box;
+	text-align: center;
+	margin: 0 10px;
+	background: #003640;
+	overflow: hidden;
+	border-radius: 4px;
+	box-shadow: 0 0 0 2px rgba(0,7,10,1);
+}
+
+.Contact-container .box .icon{
+	width: 100%;
+	height: 100%;
+	background: #003640;
+	transition: 0.5s;
+}
+
+.Contact-container .box .icon .fas{
+	font-size: 60px;
+	line-height: 100px;
+	color: #03a9f4;
+}
+
+.Contact-container .box .icon .fab{
+	font-size: 60px;
+	line-height: 100px;
+	color: #03a9f4;
+}
+
+.Contact-container .box .details{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #03a9f4;
+	transition: 0.5s;
+	transform: scale(2);
+	opacity: 0;
+}
+
+.Contact-container .box .details1{
+position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #03a9f4;
+	transition: 0.5s;
+	transform: scale(2);
+	opacity: 0;
+}
+
+.Contact-container .box:hover .details{
+transform: scale(1);
+	opacity: 1;
+}
+
+.Contact-container .box:hover .details1{
+transform: scale(1);
+	opacity: 1;
+}
+
+.Contact-container .box .details h3{
+margin: 0;
+	padding: 0;
+	line-height: 100px;
+	font-size: 25px;
+	color: #fff;
+}
+
+.Contact-container .box .details1 .press{
+margin-bottom: 20px;
+	padding: 0;
+	font-size: 25px;
+	color: #fff;
+}
+
+.Contact-container .box .details1 ul li .fab{
+font-size: 60px;
+    color: #fff;
+    margin-top: -38px;
+}
+
+.Contact-container .box:nth-child(2) .details{
+background: #e91e63;
+}
+
+.Contact-container .box:nth-child(2) .details1{
+background: #e91e63;
+}
+
+.Contact-container .box:nth-child(3) .details h3{
+background: #29a950;
+    font-size: 17px;
+}
+
+.Contact-container .box:nth-child(3) .details1{
+background: #29a950;
+}
+/* End Contact */

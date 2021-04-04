@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW</title>
+    <!--Icon Document-->
+    <link rel="icon" href="Img/BMW.png">
+    <!--Font Google-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <!--Library fontawesome-->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!--my style-->
+    <link rel="stylesheet" href="css/Style.css">
+</head>
+
+<body>
+
+    <!-------------------- 
+    ---- Start Navbar ----
+    --------------------->
+    <header>
+        <!-- logo Navbar -->
+        <a href="index.html"><img src="img/BMW.png" alt="Logo BMW" class="logo"></a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+        <!-- Button Navbar -->
+        <!-- Start Button And Modal Login Form  -->
+        <!-- Start Button -->
+        <div class="container-button">
+            <button class="Button-modal" onclick="document.getElementById('openModal').style.display='block'"
+                style="width:auto;">
+                <a href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Log In
+                </a>
+            </button>
+        </div>
+        <!-- End Button -->
+
+
+        <!------------------------------ 
+        ---- Start Modal Login Form ----
+        -------------------------------->
+        <div id="openModal" class="modal">
+
+            <form class="modal-content animate" action="Contact.html" method="post" id="myform"
+                onsubmit="return validata();">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('openModal').style.display='none'" class="close"
+                        title="Close Modal">&times;</span>
+                    <img src="img/avatar.svg" alt="Avatar" class="avatar">
+                    <h2>Welcome</h2>
+                </div>
+
+                <!-- Start The Form -->
+                <div class="container">
+                    <div class="input-div one">
+                        <div class="icon-form">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="div">
+                            <h5>Username</h5>
+                            <input type="text" class="input" placeholder="Enter Your Name, first name and second name."
+                                id="name">
+                        </div>
+                    </div>
+                    <div class="input-div one">
+                        <div class="icon-form">
+                            <i class="fas fa-at"></i>
+                        </div>
+                        <div class="div">
+                            <h5>Email</h5>
+                            <input type="email" class="input" placeholder="Example: email@example.com" id="email">
+                        </div>
+                    </div>
+                    <div class="input-div one">
+                        <div class="icon-form">
+                            <i class="fas fa-mobile"></i>
+                        </div>
+                        <div class="div">
+                            <h5>Phone Number</h5>
+                            <input type="text" class="input" placeholder="Example: 01234567891" id="phone">
+                        </div>
+                    </div>
+                    <div class="input-div pass">
+                        <div class="icon-form">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="div">
+                            <h5>Password</h5>
+                            <input type="password" class="input" placeholder="Use 8 or more characters with a mix of letters, numbers & symbols.
+                        " id="password">
+                        </div>
+                    </div>
+                    <input type="submit" class="btn" value="Login">
+                </div>
+                <!-- End The Form -->
+
+
+                <!-- Start container The Form Footer -->
+                <div class="container-footer">
+                    <button type="button" onclick="document.getElementById('openModal').style.display='none'"
+                        class="cancel-button">
+                        Cancel
+                    </button>
+                    <a class="Forgot-psw" href="#">Forgot Password ?</a>
+                </div>
+            </form>
+        </div>
+        <!-- End Modal Login Form -->
+        <!-- End button And Modal Login Form  -->
+    </header>
+    <!-- End Navbar  -->
+
+
+    <!---------------------------------------------- 
+    ---- Start Background video with JavaScript ----
+    ----------------------------------------------->
+
+    <video autoplay loop muted controls class="About__video">
+        <source src="video/The all-new BMW X6 Series in Vantablack.mp4">
+    </video>
+
+    
+    <!-- End Background video with JavaScript -->
+
+
+    <!---------------------------------------- 
+    ---- Start Read More Read Less Button ----
+    ----------------------------------------->
+    <div class="read">
+        <h2>Read More Read Less Button</h2>
+        <p>
+            <b>BMW</b> MBW of Slinger, WI, began operations over 50 years ago with its introduction of a lower maintenance vibratory plate compactor.<span id="dots">...</span><span id="more"> Today the Company's product line encompasses a full line of soil compaction products, equipment for mixing, vibrating, screeding, finishing and slipforming of concrete, as well as a number of specialty products for construction applications. All MBW products have been designed and manufactured with one mission in mind: To advance the state of the art in product design while providing reliable and reasonable relationships with its customers.
+            <br> <br>
+            That mission began in February of 1967 when two men with extensive backgrounds in mechanical vibration and soil compaction began a business in an unheated contractors shed. Helmut Maass and Frank Multerer Sr. built four vibratory plates at a time. They loaded them into the Multerer family station wagon and Frank would travel to Chicago or other Midwestern cities peddling the machines on a cash-only- sales basis. When those machines were sold, the proceeds were immediately used to build four more plates and Frank would be off on yet another venture.
+            <br> <br>
+            From those humble beginnings MBW emerged in 1970 as a market leader in vibratory plates throughout several Midwestern states. The plates were revolutionary in that they dramatically reduced maintenance associated with plates of that time and applied a different approach in the vibration system allowing them to travel faster and deliver greater compaction energy than competitive models.
+            </span>
+        </p>
+
+
+
+        <button onclick="myFunction()" id="myBtn" class="glow-on-hover">Read more</button>
+    </div>
+    <!-- End Read More Read Less Button -->
+
+
+    
+    <!------------------------ 
+    ---- Start Google Map ----
+    ------------------------->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13815.316461351975!2d31.240893103874196!3d30.041760011374937!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145840c640406f07%3A0xbec96781af26951c!2sEl-Tahrir%20Square%2C%20Cairo%20Governorate!5e0!3m2!1sen!2seg!4v1617138850814!5m2!1sen!2seg" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <!-- End Google Map -->
+
+
+
+    <!-------------------- 
+    ---- Start Footer ----
+    --------------------->
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+            <img src="img/BMW.png">
+            <h3>Car <span>BMW</span></h3>
+
+            <p class="footer-links">
+                <a href="index.html">Home</a>
+                |
+                <a href="About.html">About</a>
+                |
+                <a href="Contact.html">Contact</a>
+            </p>
+            <p class="footer-Copyright">Copyright &copy; 2021 <span>Design By: Peter Soliman</span> .you</p>
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p>Egypt - Cairo</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+2 0122 264 1669</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:petersoliman150@gmail.com">petersoliman150@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>About the company</span>
+                bmwcarusa.com is a site that presents information about all types of the latest BMW cars and BMW motorcycles.</p>
+            <div class="footer-icons">
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-google"></i></a>
+                <a href="#"><i class="fab fa-yahoo"></i></a>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!--my main-->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
+
+
